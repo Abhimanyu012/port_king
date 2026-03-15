@@ -1,8 +1,8 @@
 import app from "./app.js";
 
 const PORT = 5000;
-app.get("/", (req, res) => {
-  res.json("Server is runnig perfectly in index through app");
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "ok" });
 });
 
 app.listen(PORT, () => {
